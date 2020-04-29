@@ -1,0 +1,105 @@
+
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $logo-navy;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  grid-template-areas:
+    "header header header"
+    "hero hero hero"
+    "search search search"
+    "article article article"
+    "footer footer footer";
+}
+
+nav {
+  padding: 1rem;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: repeat(3, 1fr);
+  background: $yellow;
+
+  a {
+    padding-left: 1rem;
+    color: $logo-navy;
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 10%;
+  }
+
+  .logo-text {
+    justify-self: center;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+    justify-self: end;
+  }
+}
+
+.hero {
+  grid-area: hero;
+  height: 45vw;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: $font-big;
+    font-size: 4rem;
+    color: $navy;
+
+    span {
+        color: $yellow;
+    }
+  }
+}
+
+.search-section {
+  grid-area: search;
+  background: $navy;
+  color: $white;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  input {
+    margin: 1rem 0 1rem 0;
+    border-radius: 2rem;
+    padding: .7rem 8rem;
+  }
+
+  .chip {
+    display: block;
+    position:relative;
+    background: $blue;
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+  }
+
+}
