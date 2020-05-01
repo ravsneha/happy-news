@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  font: 100% "Work Sans", sans-serif;
+  color: #1b1464; }
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header header header" "hero hero hero" "search search search" "about about about" "footer footer footer"; }
+
+nav {
+  padding: 1rem;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: repeat(3, 1fr);
+  background: #FFDF4C; }
+  nav #logo-text {
+    font-size: 1.5rem;
+    text-align: center; }
+  nav a {
+    padding-left: 1rem;
+    color: #1b1464;
+    text-decoration: none;
+    font-size: 1.1rem; }
+  nav .logo {
+    width: 7%; }
+  nav .logo-text {
+    justify-self: center;
+    align-items: center; }
+  nav .links {
+    align-items: center;
+    justify-self: end; }
+
+.hero {
+  grid-area: hero;
+  height: 45vw;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    color: #031D40; }
+
+span {
+  color: #FFDF4C; }
+
+h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 5rem;
+  text-align: center; }
+
+.search-section {
+  grid-area: search;
+  background: #031D40;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center; }
+  .search-section input {
+    margin: 1rem 0 .2rem 0;
+    border-radius: 2rem;
+    padding: 1rem 20rem; }
+  .search-section .chip {
+    position: relative;
+    background: #fff;
+    display: inline-block;
+    padding: .6rem 3rem;
+    border-radius: 25px;
+    margin: 0 1rem 0 1rem; }
+    .search-section .chip p {
+      color: #031D40;
+      font-weight: bold;
+      font-size: 1.1rem; }
+  .search-section #active {
+    background: #0FC47A; }
+
+.articles {
+  color: #fff;
+  grid-area: search;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 3rem 1rem 1rem 1rem;
+  grid-gap: 20px 50px; }
+  .articles .article-card {
+    background: #FFDF4C;
+    border-radius: 2rem;
+    color: #031D40; }
+  .articles .article-desc {
+    padding: 1rem;
+    margin-bottom: 1rem; }
+  .articles img {
+    border-radius: 2rem 2rem 0 0;
+    width: 100%; }
+
+.about {
+  grid-area: about;
+  height: 100vh;
+  background: #031D40;
+  line-height: 4.5rem;
+  color: #fff; }
+  .about h2 {
+    font-size: 3.5rem; }
+  .about .mission {
+    margin: 2rem 3rem; }
+    .about .mission h5 {
+      display: inline;
+      font-size: 2rem;
+      background: #FFDF4C;
+      border-radius: 3rem;
+      padding: .5rem 2rem .5rem 1rem; }
+    .about .mission p {
+      text-align: left;
+      margin: 1rem 0 0 1rem;
+      line-height: 2rem; }
