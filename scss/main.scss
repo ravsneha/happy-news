@@ -18,9 +18,11 @@ body {
     "header header header"
     "hero hero hero"
     "search search search"
-    "article article article"
+    "about about about"
     "footer footer footer";
 }
+
+
 
 nav {
   padding: 1rem;
@@ -29,14 +31,20 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   background: $yellow;
 
+  #logo-text {
+    font-size: 1.5rem;
+    text-align:center;
+  }
+
   a {
     padding-left: 1rem;
     color: $logo-navy;
     text-decoration: none;
+    font-size: 1.1rem;
   }
 
   .logo {
-    width: 10%;
+    width: 7%;
   }
 
   .logo-text {
@@ -59,47 +67,114 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+
   h1 {
     font-family: $font-big;
     font-size: 4rem;
     color: $navy;
-
-    span {
-        color: $yellow;
-    }
   }
 }
+
+span {
+    color: $yellow;
+}
+
+h2 {
+  color: $white;
+  font-size: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
 
 .search-section {
   grid-area: search;
   background: $navy;
   color: $white;
+  font-family: $font-big;
   height: 100vh;
   padding: 1rem;
   text-align: center;
-
   h2 {
-    font-size: 2rem;
-    margin-top: 5rem;
     padding-bottom: 1rem;
   }
 
-  input {
-    margin: 1rem 0 1rem 0;
-    border-radius: 2rem;
-    padding: .7rem 8rem;
+  button:hover{
+    background: $yellow;
   }
 
-  .chip {
-    display: block;
+  .active {
+    background: $green;
+  }
+
+  .active:hover {
+    background: $green;
+  }
+
+  button {
     position:relative;
-    background: $blue;
+    background: $white;
     display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
+    padding: .6rem 3rem;
     border-radius: 25px;
+    margin: 0 1rem 0 1rem;
+
+    color: $navy;
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 
+}
+
+.articles {
+  color: $white;
+  grid-area:search;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  margin: 3rem 1rem 1rem 1rem;
+  grid-gap: 20px 50px;
+
+  .article-card {
+    background: $yellow;
+    border-radius: 2rem;
+    color: $navy;
+  }
+
+  .article-info {
+      padding: 1rem;
+      margin-bottom: 1rem;
+  }
+
+  img {
+    border-radius: 2rem 2rem 0 0;
+    width:100%;
+  }
+}
+
+.about {
+  grid-area:about;
+  height: 100vh;
+  background: $navy;
+  line-height: 4.5rem;
+  color: $white;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .mission {
+    margin: 2rem 3rem;
+    h5 {
+      display: inline;
+      font-size: 2rem;
+      background: $yellow;
+      border-radius: 3rem;
+      padding: .5rem 2rem .5rem 1rem;
+    }
+    p {
+      text-align: left;
+      margin: 1rem 0 0 1rem;
+      line-height: 2rem;
+    }
+  }
 }
