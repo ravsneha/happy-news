@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 100% $font-stack;
+  color: $logo-navy;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "hero"
+    "search"
+    "about"
+    "footer";
+}
+
+
+
+nav {
+  padding: 1rem;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: repeat(3, 1fr);
+  background: $yellow;
+
+  #logo-text {
+    font-size: 1.2rem;
+    text-align:center;
+    font-family: $font-big;
+    font-weight: $bold;
+  }
+
+  a {
+    padding-left: 1rem;
+    color: $logo-navy;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    width: 7%;
+  }
+
+  .logo-text {
+    justify-self: center;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+    justify-self: end;
+  }
+}
+
+.hero {
+  grid-area: hero;
+  height: 45vw;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $font-big;
+    font-weight: $bold;
+    font-size: 4rem;
+    color: $navy;
+  }
+}
+
+span {
+    font-family: $font-big;
+    font-weight: $bold;
+    color: $yellow;
+}
+
+h2 {
+  font-family: $font-big;
+  font-weight: $bold;
+  color: $white;
+  font-size: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+
+.search-section {
+  grid-template-areas:
+  "text"
+  "chips"
+  "articles";
+  grid-area: search;
+  background: $navy;
+  color: $white;
+  font-family: $font-big;
+  padding: 1rem;
+  text-align: center;
+
+  .search-chips {
+    grid-area: chips;
+  }
+  h2 {
+    padding-bottom: 1rem;
+  }
+
+  button:hover{
+    background: $yellow;
+    font-weight: $bold;
+  }
+
+  .active {
+    background: $green;
+    font-weight: bold;
+  }
+
+  .active:hover {
+    background: $green;
+    font-weight: bold;
+  }
+
+  button {
+    background: $white;
+    padding: .6rem 3rem;
+    border-radius: 25px;
+    margin: 0 1rem 0 1rem;
+
+    color: $navy;
+    font-size: 1.1rem;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns:30% 30% 30%;
+    grid-area: articles;
+    color: $white;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    grid-gap: 20px 50px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .article-card {
+      z-index: 1;
+      background: $yellow;
+      border-radius: 2rem;
+      color: $navy;
+      text-decoration: none;
+    }
+
+    .article-title {
+      font-family: $font-big;
+      font-weight: $bold;
+      font-size: 1.5rem;
+    }
+
+    .article-desc {
+      font-size: 1rem;
+    }
+
+    .article-info {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    img {
+      border-radius: 2rem 2rem 0 0;
+      width:100%;
+    }
+  }
+
+}
+
+
+
+.about {
+  grid-area:about;
+  height: 90vh;
+  background: $navy;
+  line-height: 4.5rem;
+  color: $white;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .mission, .whoami {
+    margin: 2rem 3rem;
+    h5 {
+      font-family: $font-big;
+      font-weight: $bold;
+      color: $logo-navy;
+      display: inline;
+      font-size: 2rem;
+      background: $yellow;
+      border-radius: 3rem;
+      padding: .5rem 2rem .5rem 2rem;
+    }
+    p {
+      color: $white;
+      text-align: left;
+      margin: 1rem 0 0 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  .whoami {
+    text-align: right;
+    p {
+      text-align: right;
+    }
+  }
+}
+
+.footer {
+  background: $yellow;
+  text-align: center;
+  padding: 2rem;
+}
